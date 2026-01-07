@@ -1,17 +1,5 @@
-#include <cstdint>
-#include <cstdio>
-#include <cstring>
 
-
-int emit(uint8_t *code, int pc, uint8_t byte) {
-    code[pc++] = byte;
-    return pc;
-}
-
-int emit_int(uint8_t *code, int pc, int value) {
-    *(int*)&code[pc] = value; // Smashes 4 bytes into the array
-    return pc + 4;
-}
+#include "assembler.h"
 
 typedef enum {
     PUSH  = 0x01,
@@ -39,7 +27,20 @@ typedef enum {
 
 
 
-int assemble_line(char *line, uint8_t *code, int pc) {
+
+int Assembler::emit(uint8_t *code, int pc, uint8_t byte) {
+    code[pc++] = byte;
+    return pc;
+}
+
+int Assembler::emit_int(uint8_t *code, int pc, int value) {
+    *(int*)&code[pc] = value; // Smashes 4 bytes into the array
+    return pc + 4;
+}
+
+
+
+int Assembler::assemble_line(char *line, uint8_t *code, int pc) {
     char instr[16];
     int val;
   
