@@ -25,4 +25,4 @@ run: all
 	./$(BIN_DIR)/vm area.bin
 
 clean:
-	rm -f vm assembler
+	rm -f vm assembler *.bin
