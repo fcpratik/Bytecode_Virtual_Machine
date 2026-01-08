@@ -139,7 +139,7 @@ base_case:
 # Output: Final stack top: 120
 ```
 
-### Running All Tests and Benchmarks
+### Running All Tests
 
 ```bash
 make run
@@ -148,7 +148,7 @@ make run
 This will:
 1. Compile all components
 2. Run all test cases in `tests/` folder
-3. Execute the benchmark suite
+
 
 ## 📊 Test Suite
 
