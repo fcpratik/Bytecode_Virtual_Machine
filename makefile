@@ -37,10 +37,7 @@ run: all
 			echo "Assembler Failed for $$asm_file"; \
 		fi \
 	done
-	@echo "========================================"
-	@echo "       RUNNING BENCHMARK                "
-	@echo "========================================"
-	./benchmark
+	
 
 # Clean up binaries
 clean:
