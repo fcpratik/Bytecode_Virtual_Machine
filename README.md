@@ -1,6 +1,6 @@
 # Bytecode Virtual Machine (BVM)
 
-A lightweight, stack-based virtual machine with a custom assembler and comprehensive benchmark suite. This project implements a complete virtual machine capable of executing bytecode programs with support for arithmetic operations, control flow, function calls, and memory management.
+This project implements a complete virtual machine capable of executing bytecode programs with support for arithmetic operations, control flow, function calls, and memory management.
 
 ## 🚀 Features
 
@@ -8,10 +8,10 @@ A lightweight, stack-based virtual machine with a custom assembler and comprehen
 - **Custom Assembly Language**: Human-readable assembly syntax with label support
 - **Two-Pass Assembler**: Converts assembly code to bytecode with automatic address resolution
 - **Rich Instruction Set**: 17 opcodes covering arithmetic, logic, control flow, and memory operations
-- **Function Call Support**: Full support for nested function calls with separate return stack
+- **Function Call Support**: support for nested function calls with separate return stack
 - **Memory Management**: 256 integer memory slots for variable storage
 - **Benchmark Suite**: Performance testing framework with 10 test programs
-- **Comprehensive Error Handling**: Stack overflow/underflow detection and division by zero protection
+- **Comprehensive Error Handling**: Stack overflow/underflow detection and division by zero checks
 
 ## 📋 Instruction Set
 
@@ -58,7 +58,7 @@ A lightweight, stack-based virtual machine with a custom assembler and comprehen
            │ bytecode
            │
 ┌─────────────────────────────────────────┐
-│           Two-Pass Assembler            │
+│               Assembler                 │
 ├─────────────────────────────────────────┤
 │  Pass 1: Build Symbol Table (Labels)    │
 │  Pass 2: Generate Bytecode              │
@@ -260,19 +260,6 @@ This project demonstrates:
 - Performance benchmarking and profiling
 - Low-level systems programming in C++
 
-## 🚧 Future Enhancements
-
-Potential improvements:
-- [ ] Add floating-point arithmetic support
-- [ ] Implement more comparison operators (<=, >=, !=, ==)
-- [ ] Add bitwise operations (AND, OR, XOR, NOT, SHIFT)
-- [ ] Support for string operations
-- [ ] Interactive debugger with breakpoints
-- [ ] Disassembler (bytecode → assembly)
-- [ ] Optimization passes in assembler
-- [ ] JIT compilation for hot code paths
-- [ ] Extended memory addressing modes
-- [ ] System call interface for I/O operations
 
 ## 📝 Assembly Language Syntax
 
@@ -313,10 +300,6 @@ hexdump -C program.bin
 ```bash
 ls -l program.bin
 ```
-
-## 📄 License
-
-This project is open source and available under the MIT License.
 
 ## 👨‍💻 Contributing
 
